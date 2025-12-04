@@ -2,7 +2,7 @@ import sys
 
 sys.path.append("..")
 
-from utils import read_input
+from utils import execution_time, read_input, save_output
 
 
 def part1() -> None:
@@ -55,5 +55,10 @@ def part2() -> None:
 
 
 if __name__ == "__main__":
-    # part1()
-    part2()
+    part1_time = execution_time(part1)
+    part2_time = execution_time(part2)
+
+    print(f"Part 1 execution time: {part1_time:.6f} seconds")
+    print(f"Part 2 execution time: {part2_time:.6f} seconds")
+
+    save_output(new_row=[part1_time, part2_time])
