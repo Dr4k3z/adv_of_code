@@ -19,7 +19,7 @@ def execution_time(func: Callable[..., Any], n_samples: int = 10) -> float:
     return sum(times) / n_samples
 
 
-def read_input(filename: str = "input.txt", to_int: bool = False) -> list[list[int]] | list[str]:
+def read_input(filename: str = "input.txt", to_int: bool = False) -> list[str] | list[list[int]]:
     lines = []
     with open(filename) as file:
         for line in file:
